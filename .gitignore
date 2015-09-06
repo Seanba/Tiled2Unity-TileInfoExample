@@ -41,3 +41,9 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# My directories and files I want ignored
+unity/TileInfo/Library
+unity/TileInfo/Temp
+
+
