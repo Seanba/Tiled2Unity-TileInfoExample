@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16" nextobjectid="172">
+ <properties>
+  <property name="DeleteTiles" value="true"/>
+ </properties>
+ <tileset firstgid="1" source="fe-tiles.tsx"/>
+ <layer name="regions" width="20" height="20">
+  <data encoding="csv">
+1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="input_Terrain" width="20" height="20">
+  <data encoding="csv">
+2,0,10,0,91,0,92,0,94,0,0,0,0,0,97,0,98,0,104,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+107,0,101,0,93,0,96,0,95,0,102,0,105,0,90,0,100,0,617,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+265,0,266,0,267,0,397,0,398,0,399,0,400,0,401,0,402,0,403,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+404,0,177,0,178,0,179,0,180,0,221,0,222,0,223,0,224,0,225,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+133,0,135,0,136,0,137,0,138,0,139,0,140,0,141,0,142,0,309,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+310,0,311,0,312,0,313,0,314,0,315,0,441,0,442,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup color="#ffaa00" name="output_objGrass">
+  <object id="90" name="GrassTile" x="0" y="0" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="97" name="GrassTile" x="32" y="0" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="98" name="GrassTile" x="64" y="0" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="101" name="GrassTile" x="96" y="0" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="102" name="GrassTile" x="128" y="0" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="105" name="GrassTile" x="224" y="0" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="106" name="GrassTile" x="256" y="0" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="107" name="GrassTile" x="288" y="0" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="109" name="GrassTile" x="288" y="32" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="110" name="GrassTile" x="256" y="32" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="114" name="GrassTile" x="224" y="32" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="115" name="GrassTile" x="192" y="32" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="116" name="GrassTile" x="160" y="32" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="117" name="GrassTile" x="128" y="32" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="118" name="GrassTile" x="96" y="32" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="119" name="GrassTile" x="0" y="32" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="120" name="GrassTile" x="32" y="32" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="121" name="GrassTile" x="64" y="32" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="122" name="GrassTile" x="192" y="160" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass with some decoration"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="123" name="GrassTile" x="224" y="160" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass with some decoration"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#00ff00" name="output_objTree">
+  <object id="146" name="TreeTile" x="0" y="64" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="147" name="TreeTile" x="32" y="64" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="149" name="TreeTile" x="64" y="64" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#000000" name="output_objWall">
+  <object id="79" name="WallTile" x="96" y="64" width="16" height="16">
+   <properties>
+    <property name="Note" value="WALL tile blocks movement"/>
+    <property name="Terrain" value="Wall"/>
+   </properties>
+  </object>
+  <object id="80" name="WallTile" x="128" y="64" width="16" height="16">
+   <properties>
+    <property name="Note" value="WALL tile blocks movement"/>
+    <property name="Terrain" value="Wall"/>
+   </properties>
+  </object>
+  <object id="81" name="WallTile" x="160" y="64" width="16" height="16">
+   <properties>
+    <property name="Note" value="WALL tile blocks movement"/>
+    <property name="Terrain" value="Wall"/>
+   </properties>
+  </object>
+  <object id="82" name="WallTile" x="192" y="64" width="16" height="16">
+   <properties>
+    <property name="Note" value="WALL tile blocks movement"/>
+    <property name="Terrain" value="Wall"/>
+   </properties>
+  </object>
+  <object id="84" name="WallTile" x="224" y="64" width="16" height="16">
+   <properties>
+    <property name="Note" value="WALL tile blocks movement"/>
+    <property name="Terrain" value="Wall"/>
+   </properties>
+  </object>
+  <object id="86" name="WallTile" x="256" y="64" width="16" height="16">
+   <properties>
+    <property name="Note" value="WALL tile blocks movement"/>
+    <property name="Terrain" value="Wall"/>
+   </properties>
+  </object>
+  <object id="87" name="WallTile" x="288" y="64" width="16" height="16">
+   <properties>
+    <property name="Note" value="WALL tile blocks movement"/>
+    <property name="Terrain" value="Wall"/>
+   </properties>
+  </object>
+  <object id="88" name="WallTile" x="0" y="96" width="16" height="16">
+   <properties>
+    <property name="Note" value="WALL tile blocks movement"/>
+    <property name="Terrain" value="Wall"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff0000" name="output_objMountain">
+  <object id="151" name="MountainTile" x="32" y="96" width="16" height="16">
+   <properties>
+    <property name="Note" value="MOUNTAIN tiles impede movement"/>
+    <property name="Terrain" value="Mountain"/>
+   </properties>
+  </object>
+  <object id="152" name="MountainTile" x="64" y="96" width="16" height="16">
+   <properties>
+    <property name="Note" value="MOUNTAIN tiles impede movement"/>
+    <property name="Terrain" value="Mountain"/>
+   </properties>
+  </object>
+  <object id="153" name="MountainTile" x="96" y="96" width="16" height="16">
+   <properties>
+    <property name="Note" value="MOUNTAIN tiles impede movement"/>
+    <property name="Terrain" value="Mountain"/>
+   </properties>
+  </object>
+  <object id="154" name="MountainTile" x="128" y="96" width="16" height="16">
+   <properties>
+    <property name="Note" value="MOUNTAIN tiles impede movement"/>
+    <property name="Terrain" value="Mountain"/>
+   </properties>
+  </object>
+  <object id="155" name="MountainTile" x="160" y="96" width="16" height="16">
+   <properties>
+    <property name="Note" value="MOUNTAIN tiles impede movement"/>
+    <property name="Terrain" value="Mountain"/>
+   </properties>
+  </object>
+  <object id="157" name="MountainTile" x="192" y="96" width="16" height="16">
+   <properties>
+    <property name="Note" value="MOUNTAIN tiles impede movement"/>
+    <property name="Terrain" value="Mountain"/>
+   </properties>
+  </object>
+  <object id="159" name="MountainTile" x="224" y="96" width="16" height="16">
+   <properties>
+    <property name="Note" value="MOUNTAIN tiles impede movement"/>
+    <property name="Terrain" value="Mountain"/>
+   </properties>
+  </object>
+  <object id="160" name="MountainTile" x="256" y="96" width="16" height="16">
+   <properties>
+    <property name="Note" value="MOUNTAIN tiles impede movement"/>
+    <property name="Terrain" value="Mountain"/>
+   </properties>
+  </object>
+  <object id="161" name="MountainTile" x="288" y="96" width="16" height="16">
+   <properties>
+    <property name="Note" value="MOUNTAIN tiles impede movement"/>
+    <property name="Terrain" value="Mountain"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#aa5500" name="output_objBridge">
+  <object id="163" name="BridgeTile" x="0" y="128" width="16" height="16">
+   <properties>
+    <property name="Note" value="BRIDGE tile over troubled water"/>
+    <property name="Terrain" value="Bridge"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#0055ff" name="output_objWater">
+  <object id="126" name="WaterTile" x="32" y="128" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="127" name="WaterTile" x="64" y="128" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="128" name="WaterTile" x="96" y="128" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="132" name="WaterTile" x="128" y="128" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="133" name="WaterTile" x="160" y="128" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="134" name="WaterTile" x="192" y="128" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="135" name="WaterTile" x="224" y="128" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="136" name="WaterTile" x="256" y="128" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="137" name="WaterTile" x="288" y="128" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="138" name="WaterTile" x="0" y="160" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="139" name="WaterTile" x="32" y="160" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="140" name="WaterTile" x="64" y="160" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="143" name="WaterTile" x="96" y="160" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="144" name="WaterTile" x="128" y="160" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="145" name="WaterTile" x="160" y="160" width="16" height="16">
+   <properties>
+    <property name="Terrain" value="WATER tiles get you wet"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="output_Test" width="20" height="20">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+</map>

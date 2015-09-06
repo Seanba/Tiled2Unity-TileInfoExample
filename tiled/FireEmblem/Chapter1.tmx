@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="10" tilewidth="16" tileheight="16" nextobjectid="14026">
+ <tileset firstgid="1" source="fe-tiles.tsx"/>
+ <layer name="Terrain" width="15" height="10">
+  <data encoding="csv">
+401,107,402,403,404,265,2,177,179,180,2,135,221,224,221,
+398,10,397,399,400,2,2,2,91,92,2,136,91,98,223,
+104,101,93,267,2,2,265,442,94,98,265,133,97,98,2,
+265,94,95,91,93,2,2,2,441,94,105,136,2,94,92,
+2,2,267,94,96,267,2,265,2,2,2,139,142,102,94,
+2,2,2,267,2,2,2,2,265,2,2,2,133,90,101,
+267,2,267,267,2,2,265,2,267,267,2,2,139,142,94,
+267,91,93,267,2,2,267,2,2,267,2,2,2,135,2,
+2,94,100,265,2,267,265,267,2,2,2,2,2,137,310,
+617,267,2,91,101,93,267,2,265,2,312,311,313,309,309
+</data>
+ </layer>
+ <objectgroup color="#ffaa00" name="objGrass">
+  <object id="13876" name="GrassTile" x="96" y="0" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13877" name="GrassTile" x="160" y="0" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13878" name="GrassTile" x="80" y="16" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13879" name="GrassTile" x="96" y="16" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13880" name="GrassTile" x="112" y="16" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13881" name="GrassTile" x="160" y="16" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13882" name="GrassTile" x="64" y="32" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13883" name="GrassTile" x="80" y="32" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13884" name="GrassTile" x="224" y="32" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13885" name="GrassTile" x="80" y="48" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13886" name="GrassTile" x="96" y="48" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13887" name="GrassTile" x="112" y="48" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13888" name="GrassTile" x="192" y="48" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13889" name="GrassTile" x="0" y="64" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13890" name="GrassTile" x="16" y="64" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13891" name="GrassTile" x="96" y="64" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13892" name="GrassTile" x="128" y="64" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13893" name="GrassTile" x="144" y="64" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13894" name="GrassTile" x="160" y="64" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13895" name="GrassTile" x="0" y="80" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13896" name="GrassTile" x="16" y="80" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13897" name="GrassTile" x="32" y="80" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13898" name="GrassTile" x="64" y="80" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13899" name="GrassTile" x="80" y="80" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13900" name="GrassTile" x="96" y="80" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13901" name="GrassTile" x="112" y="80" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13902" name="GrassTile" x="144" y="80" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13903" name="GrassTile" x="160" y="80" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13904" name="GrassTile" x="176" y="80" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13905" name="GrassTile" x="16" y="96" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13906" name="GrassTile" x="64" y="96" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13907" name="GrassTile" x="80" y="96" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13908" name="GrassTile" x="112" y="96" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13909" name="GrassTile" x="160" y="96" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13910" name="GrassTile" x="176" y="96" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13911" name="GrassTile" x="64" y="112" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13912" name="GrassTile" x="80" y="112" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13913" name="GrassTile" x="112" y="112" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13914" name="GrassTile" x="128" y="112" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13915" name="GrassTile" x="160" y="112" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13916" name="GrassTile" x="176" y="112" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13917" name="GrassTile" x="192" y="112" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13918" name="GrassTile" x="224" y="112" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13919" name="GrassTile" x="0" y="128" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13920" name="GrassTile" x="64" y="128" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13921" name="GrassTile" x="128" y="128" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13922" name="GrassTile" x="144" y="128" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13923" name="GrassTile" x="160" y="128" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13924" name="GrassTile" x="176" y="128" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13925" name="GrassTile" x="192" y="128" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13926" name="GrassTile" x="32" y="144" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13927" name="GrassTile" x="112" y="144" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13928" name="GrassTile" x="144" y="144" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13929" name="GrassTile" x="16" y="16" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13930" name="GrassTile" x="128" y="16" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13931" name="GrassTile" x="192" y="16" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13932" name="GrassTile" x="48" y="48" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13933" name="GrassTile" x="16" y="112" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13934" name="GrassTile" x="48" y="144" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13935" name="GrassTile" x="144" y="16" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13936" name="GrassTile" x="224" y="48" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13937" name="GrassTile" x="128" y="32" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13938" name="GrassTile" x="16" y="48" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13939" name="GrassTile" x="144" y="48" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13940" name="GrassTile" x="208" y="48" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13941" name="GrassTile" x="48" y="64" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13942" name="GrassTile" x="224" y="64" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13943" name="GrassTile" x="224" y="96" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13944" name="GrassTile" x="16" y="128" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13945" name="GrassTile" x="192" y="32" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13946" name="GrassTile" x="208" y="16" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13947" name="GrassTile" x="144" y="32" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13948" name="GrassTile" x="208" y="32" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13949" name="GrassTile" x="0" y="32" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13950" name="GrassTile" x="16" y="0" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13951" name="GrassTile" x="16" y="32" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13952" name="GrassTile" x="224" y="80" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13953" name="GrassTile" x="64" y="144" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13954" name="GrassTile" x="32" y="32" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13955" name="GrassTile" x="64" y="48" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13956" name="GrassTile" x="32" y="112" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13957" name="GrassTile" x="80" y="144" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13958" name="GrassTile" x="64" y="64" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13959" name="GrassTile" x="32" y="48" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13960" name="GrassTile" x="208" y="64" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13961" name="GrassTile" x="160" y="48" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13962" name="GrassTile" x="208" y="80" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13963" name="GrassTile" x="32" y="128" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="13964" name="GrassTile" x="0" y="144" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass terrain has low move cost"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="14024" name="GrassTile" x="128" y="48" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass with some decoration"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+  <object id="14025" name="GrassTile" x="112" y="32" width="16" height="16">
+   <properties>
+    <property name="Note" value="Grass with some decoration"/>
+    <property name="Terrain" value="Grass"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#008a00" name="objTree">
+  <object id="13965" name="TreeTile" x="80" y="0" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="13966" name="TreeTile" x="96" y="32" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="13967" name="TreeTile" x="160" y="32" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="13968" name="TreeTile" x="0" y="48" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="13969" name="TreeTile" x="112" y="64" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="13970" name="TreeTile" x="128" y="80" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="13971" name="TreeTile" x="96" y="96" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="13972" name="TreeTile" x="48" y="128" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="13973" name="TreeTile" x="96" y="128" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="13974" name="TreeTile" x="128" y="144" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="13975" name="TreeTile" x="48" y="32" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="13976" name="TreeTile" x="32" y="64" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="13977" name="TreeTile" x="80" y="64" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="13978" name="TreeTile" x="48" y="80" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="13979" name="TreeTile" x="0" y="96" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="13980" name="TreeTile" x="32" y="96" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="13981" name="TreeTile" x="48" y="96" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="13982" name="TreeTile" x="128" y="96" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="13983" name="TreeTile" x="144" y="96" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="13984" name="TreeTile" x="0" y="112" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="13985" name="TreeTile" x="48" y="112" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="13986" name="TreeTile" x="96" y="112" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="13987" name="TreeTile" x="144" y="112" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="13988" name="TreeTile" x="80" y="128" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="13989" name="TreeTile" x="112" y="128" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="13990" name="TreeTile" x="16" y="144" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+  <object id="13991" name="TreeTile" x="96" y="144" width="16" height="16">
+   <properties>
+    <property name="Note" value="Tree tile provides some defense"/>
+    <property name="Terrain" value="Tree"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#000000" name="objWall">
+  <object id="13992" name="WallTile" x="32" y="16" width="16" height="16">
+   <properties>
+    <property name="Note" value="WALL tile blocks movement"/>
+    <property name="Terrain" value="Wall"/>
+   </properties>
+  </object>
+  <object id="13993" name="WallTile" x="0" y="16" width="16" height="16">
+   <properties>
+    <property name="Note" value="WALL tile blocks movement"/>
+    <property name="Terrain" value="Wall"/>
+   </properties>
+  </object>
+  <object id="13994" name="WallTile" x="48" y="16" width="16" height="16">
+   <properties>
+    <property name="Note" value="WALL tile blocks movement"/>
+    <property name="Terrain" value="Wall"/>
+   </properties>
+  </object>
+  <object id="13995" name="WallTile" x="64" y="16" width="16" height="16">
+   <properties>
+    <property name="Note" value="WALL tile blocks movement"/>
+    <property name="Terrain" value="Wall"/>
+   </properties>
+  </object>
+  <object id="13996" name="WallTile" x="0" y="0" width="16" height="16">
+   <properties>
+    <property name="Note" value="WALL tile blocks movement"/>
+    <property name="Terrain" value="Wall"/>
+   </properties>
+  </object>
+  <object id="13997" name="WallTile" x="32" y="0" width="16" height="16">
+   <properties>
+    <property name="Note" value="WALL tile blocks movement"/>
+    <property name="Terrain" value="Wall"/>
+   </properties>
+  </object>
+  <object id="13998" name="WallTile" x="48" y="0" width="16" height="16">
+   <properties>
+    <property name="Note" value="WALL tile blocks movement"/>
+    <property name="Terrain" value="Wall"/>
+   </properties>
+  </object>
+  <object id="13999" name="WallTile" x="64" y="0" width="16" height="16">
+   <properties>
+    <property name="Note" value="WALL tile blocks movement"/>
+    <property name="Terrain" value="Wall"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff0000" name="objMountain">
+  <object id="14000" name="MountainTile" x="112" y="0" width="16" height="16">
+   <properties>
+    <property name="Note" value="MOUNTAIN tiles impede movement"/>
+    <property name="Terrain" value="Mountain"/>
+   </properties>
+  </object>
+  <object id="14001" name="MountainTile" x="128" y="0" width="16" height="16">
+   <properties>
+    <property name="Note" value="MOUNTAIN tiles impede movement"/>
+    <property name="Terrain" value="Mountain"/>
+   </properties>
+  </object>
+  <object id="14002" name="MountainTile" x="144" y="0" width="16" height="16">
+   <properties>
+    <property name="Note" value="MOUNTAIN tiles impede movement"/>
+    <property name="Terrain" value="Mountain"/>
+   </properties>
+  </object>
+  <object id="14003" name="MountainTile" x="192" y="0" width="16" height="16">
+   <properties>
+    <property name="Note" value="MOUNTAIN tiles impede movement"/>
+    <property name="Terrain" value="Mountain"/>
+   </properties>
+  </object>
+  <object id="14004" name="MountainTile" x="224" y="0" width="16" height="16">
+   <properties>
+    <property name="Note" value="MOUNTAIN tiles impede movement"/>
+    <property name="Terrain" value="Mountain"/>
+   </properties>
+  </object>
+  <object id="14005" name="MountainTile" x="224" y="16" width="16" height="16">
+   <properties>
+    <property name="Note" value="MOUNTAIN tiles impede movement"/>
+    <property name="Terrain" value="Mountain"/>
+   </properties>
+  </object>
+  <object id="14006" name="MountainTile" x="208" y="0" width="16" height="16">
+   <properties>
+    <property name="Note" value="MOUNTAIN tiles impede movement"/>
+    <property name="Terrain" value="Mountain"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#550000" name="objBridge">
+  <object id="14007" name="BridgeTile" x="176" y="32" width="16" height="16">
+   <properties>
+    <property name="Note" value="BRIDGE tile over troubled water"/>
+    <property name="Terrain" value="Bridge"/>
+   </properties>
+  </object>
+  <object id="14008" name="BridgeTile" x="192" y="80" width="16" height="16">
+   <properties>
+    <property name="Note" value="BRIDGE tile over troubled water"/>
+    <property name="Terrain" value="Bridge"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#0000ff" name="objWater">
+  <object id="14009" name="WaterTile" x="176" y="0" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="14010" name="WaterTile" x="208" y="112" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="14011" name="WaterTile" x="176" y="16" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="14012" name="WaterTile" x="176" y="48" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="14013" name="WaterTile" x="208" y="128" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="14014" name="WaterTile" x="176" y="64" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="14015" name="WaterTile" x="192" y="96" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="14016" name="WaterTile" x="192" y="64" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="14017" name="WaterTile" x="208" y="96" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="14018" name="WaterTile" x="208" y="144" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="14019" name="WaterTile" x="224" y="144" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="14020" name="WaterTile" x="224" y="128" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="14021" name="WaterTile" x="176" y="144" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="14022" name="WaterTile" x="160" y="144" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+  <object id="14023" name="WaterTile" x="192" y="144" width="16" height="16">
+   <properties>
+    <property name="Note" value="WATER tiles get you wet"/>
+    <property name="Terrain" value="Water"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
