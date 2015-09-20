@@ -45,5 +45,9 @@ Temporary Items
 # My directories and files I want ignored
 unity/TileInfo/Library
 unity/TileInfo/Temp
+unity/TileInfo/Assets/UnityVS
 
 
+unity/TileInfo/Assets/UnityVS.meta
+*.suo
+unity/TileInfo/Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll

@@ -25,7 +25,7 @@ class RPGTileInfoText : MonoBehaviour
 
             // Ignore the default mask
             int layerMask = ~(1 << LayerMask.NameToLayer("Default"));
-            RaycastHit2D hit = Physics2D.Raycast(position, Vector2.zero, 0);
+            RaycastHit2D hit = Physics2D.Raycast(position, Vector2.zero, 0, layerMask);
             if (hit)
             {
                 string layerName = LayerMask.LayerToName(hit.collider.gameObject.layer);

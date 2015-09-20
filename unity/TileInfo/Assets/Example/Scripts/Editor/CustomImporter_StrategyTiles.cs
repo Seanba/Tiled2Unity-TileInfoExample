@@ -6,7 +6,8 @@ using System.Collections.Generic;
 public class CustomImporter_StrategyTiles : Tiled2Unity.ICustomTiledImporter
 {
 
-    public void HandleCustomProperties(GameObject gameObject, IDictionary<string, string> customProperties)
+    public void HandleCustomProperties(GameObject gameObject,
+        IDictionary<string, string> customProperties)
     {
         if (customProperties.ContainsKey("Terrain"))
         {
