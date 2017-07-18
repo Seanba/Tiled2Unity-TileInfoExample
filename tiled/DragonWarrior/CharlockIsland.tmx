@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="22" height="24" tilewidth="16" tileheight="16" nextobjectid="1">
+<map version="1.0" tiledversion="1.0.2108" orientation="orthogonal" renderorder="right-down" width="22" height="24" tilewidth="16" tileheight="16" nextobjectid="1">
  <tileset firstgid="1" source="dw-tiles.tsx"/>
  <layer name="Terrain" width="22" height="24" visible="0">
   <data encoding="csv">

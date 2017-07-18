@@ -1,7 +1,24 @@
-﻿using System.Collections;
+﻿#if UNITY_4_0 || UNITY_4_0_1 || UNITY_4_2 || UNITY_4_3 || UNITY_4_5 || UNITY_4_6 || UNITY_4_7 || UNITY_5_0 || UNITY_5_1 || UNITY_5_2
+#define T2U_USE_LEGACY_IMPORTER
+#else
+#undef T2U_USE_LEGACY_IMPORTER
+#endif
+
+#if UNITY_4_0 || UNITY_4_0_1 || UNITY_4_2 || UNITY_4_3 || UNITY_4_5 || UNITY_4_6 || UNITY_4_7 || UNITY_5_0 || UNITY_5_1 || UNITY_5_2 || UNITY_5_3
+#define T2U_USE_LIGHT_PROBES_API
+#else
+#undef T2U_USE_LIGHT_PROBES_API
+#endif
+
+#if UNITY_4_0 || UNITY_4_0_1 || UNITY_4_2 || UNITY_4_3 || UNITY_4_5 || UNITY_4_6 || UNITY_4_7 || UNITY_5_0 || UNITY_5_1 || UNITY_5_2 || UNITY_5_3 || UNITY_5_4
+#define T2U_USE_5_4_API
+#else
+#endif
+
+using System.Collections;
 using System.IO;
+using System.Linq;
 using System.Xml;
-using System.Xml.Linq;
 using System;
 
 using UnityEditor;
@@ -14,13 +31,28 @@ namespace Tiled2Unity
     {
         private static bool UseThisImporter(string assetPath)
         {
-            // Is this file relative to our Tiled2Unity export marker file?
-            // If so, then we want to use this asset postprocessor
-            string assetFolder = Path.GetFullPath(Path.GetDirectoryName(assetPath));
-            string exportMarkerPath = Path.Combine(assetFolder, "..");
-            exportMarkerPath = Path.Combine(exportMarkerPath, "Tiled2Unity.export.txt");
+#if UNITY_WEBPLAYER
+            String warning = String.Format("Can not import through Tiled2Unity using the WebPlayer platform. This is depecrated by Unity Technologies and is no longer supported. Go to File -> Build Settings... and switch to another platform. (You can switch back to Web Player after importing.). File: {0}", assetPath);
+            Debug.LogError(warning);
+            return false;
+#else
+            // Certain file types are ignored by this asset post processor (i.e. scripts)
+            // (Note that an empty string as the extension is a folder)
+            string[] ignoreThese = { ".cs", ".txt",  ".shader", "", };
+            if (ignoreThese.Any(ext => String.Compare(ext, System.IO.Path.GetExtension(assetPath), true) == 0))
+            {
+                return false;
+            }
 
-            return File.Exists(exportMarkerPath);
+            // *.tiled2unity.xml files are always supported by this processor
+            if (assetPath.EndsWith(".tiled2unity.xml", StringComparison.InvariantCultureIgnoreCase))
+            {
+                return true;
+            }
+
+            // All other files can only use this post processor if their import was requested by an ImportBehaviour
+            return ImportBehaviour.IsAssetBeingImportedByTiled2Unity(assetPath);
+#endif
         }
 
         private bool UseThisImporter()
@@ -41,30 +73,37 @@ namespace Tiled2Unity
                     continue;
                 }
 
+#if !UNITY_WEBPLAYER
+                using (var logger = new Tiled2Unity.Logger("Importing '{0}'", imported))
                 using (ImportTiled2Unity t2uImporter = new ImportTiled2Unity(imported))
                 {
                     if (t2uImporter.IsTiled2UnityFile())
                     {
                         // Start the import process. This will trigger textures and meshes to be imported as well.
-                        t2uImporter.ImportBegin(imported);
+                        t2uImporter.ImportBegin(imported, t2uImporter);
                     }
                     else if (t2uImporter.IsTiled2UnityTexture())
                     {
-                        // A texture was imported and the material assigned to it may need to be fixed
+                        // A texture was imported. Once all textures are imported then we'll import materials.
                         t2uImporter.TextureImported(imported);
+                    }
+                    else if (t2uImporter.IsTiled2UnityMaterial())
+                    {
+                        // A material was imported. Once all materials are imported then we'll import meshes.
+                        t2uImporter.MaterialImported(imported);
                     }
                     else if (t2uImporter.IsTiled2UnityWavefrontObj())
                     {
-                        // Now that the mesh has been imported we will build the prefab
+                        // A mesh was imported. Once all meshes are imported we'll import the prefabs.
                         t2uImporter.MeshImported(imported);
                     }
                     else if (t2uImporter.IsTiled2UnityPrefab())
                     {
-                        // Now the the prefab is built and imported we are done
-                        t2uImporter.ImportFinished(imported);
-                        Debug.Log(string.Format("Imported prefab from Tiled map editor: {0}", imported));
+                        // A prefab was imported. Once all prefabs are imported then the import is complete.
+                        t2uImporter.PrefabImported(imported);
                     }
                 }
+#endif
             }
         }
 
@@ -77,12 +116,19 @@ namespace Tiled2Unity
 
             // Keep normals otherwise Unity will complain about needing them.
             // Normals may not be a bad idea anyhow
+#if T2U_USE_LEGACY_IMPORTER
+            modelImporter.normalImportMode = ModelImporterTangentSpaceMode.Import;
+            modelImporter.tangentImportMode = ModelImporterTangentSpaceMode.None;
+#else
             modelImporter.importNormals = ModelImporterNormals.Import;
+            modelImporter.importTangents = ModelImporterTangents.None;
+#endif
+
+            modelImporter.importBlendShapes = false;
 
             // Don't need animations or tangents.
             modelImporter.generateAnimations = ModelImporterGenerateAnimations.None;
             modelImporter.animationType = ModelImporterAnimationType.None;
-            modelImporter.importTangents = ModelImporterTangents.None;
 
             // Do not need mesh colliders on import.
             modelImporter.addCollider = false;
@@ -90,6 +136,10 @@ namespace Tiled2Unity
             // We will create and assign our own materials.
             // This gives us more control over their construction.
             modelImporter.importMaterials = false;
+
+#if UNITY_5_6_OR_NEWER
+            modelImporter.keepQuads = true;
+#endif
         }
 
         private void OnPostprocessModel(GameObject gameObject)
@@ -100,39 +150,41 @@ namespace Tiled2Unity
             // Each mesh renderer has the ability to set the a sort layer but it takes some work with Unity to expose it.
             foreach (MeshRenderer mr in gameObject.GetComponentsInChildren<MeshRenderer>())
             {
-                mr.gameObject.AddComponent<SortingLayerExposed>();
-
                 // No shadows
                 mr.receiveShadows = false;
+#if T2U_USE_LEGACY_IMPORTER
+                mr.castShadows = false;
+#else
                 mr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+#endif
 
+#if !T2U_USE_LEGACY_IMPORTER
+                mr.reflectionProbeUsage = UnityEngine.Rendering.ReflectionProbeUsage.Off;
+#endif
+
+#if T2U_USE_LIGHT_PROBES_API
                 // No probes
                 mr.useLightProbes = false;
-                mr.reflectionProbeUsage = UnityEngine.Rendering.ReflectionProbeUsage.Off;
+#else
+                mr.lightProbeUsage = UnityEngine.Rendering.LightProbeUsage.Off;
+#endif
             }
         }
 
-        private Material OnAssignMaterialModel(Material defaultMaterial, Renderer renderer)
+        private UnityEngine.Material OnAssignMaterialModel(Material defaultMaterial, Renderer renderer)
         {
             if (!UseThisImporter())
                 return null;
 
-            // This is the only reliable place to assign materials in the import chain.
-            // It kind of sucks because we have to go about making the mesh/material association in a roundabout way.
+            // What is the parent mesh name?
+            string rootName = System.IO.Path.GetFileNameWithoutExtension(this.assetPath);
 
-            // Note: This seems dangerous, but getting to the name of the base gameObject appears to be take some work.
-            // The root gameObject, at this point, seems to have "_root" appeneded to it.
-            // Once the model if finished being imported it drops this postifx
-            // This is something that could change without our knowledge
-            string rootName = renderer.transform.root.gameObject.name;
-            int rootIndex = rootName.LastIndexOf("_root");
-            if (rootIndex != -1)
-            {
-                rootName = rootName.Remove(rootIndex);
-            }
-
+#if !UNITY_WEBPLAYER
             ImportTiled2Unity importer = new ImportTiled2Unity(this.assetPath);
             return importer.FixMaterialForMeshRenderer(rootName, renderer);
+#else
+            return null;
+#endif
         }
 
         private void OnPreprocessTexture()
@@ -151,19 +203,26 @@ namespace Tiled2Unity
             this.assetImporter.userData = "tiled2unity";
 
             TextureImporter textureImporter = this.assetImporter as TextureImporter;
-            textureImporter.textureType = TextureImporterType.Advanced;
             textureImporter.npotScale = TextureImporterNPOTScale.None;
             textureImporter.convertToNormalmap = false;
-            textureImporter.lightmap = false;
             textureImporter.alphaIsTransparency = true;
-            textureImporter.grayscaleToAlpha = false;
-            textureImporter.linearTexture = false;
             textureImporter.spriteImportMode = SpriteImportMode.None;
             textureImporter.mipmapEnabled = false;
-            textureImporter.generateCubemap = TextureImporterGenerateCubemap.None;
             textureImporter.filterMode = FilterMode.Point;
             textureImporter.wrapMode = TextureWrapMode.Clamp;
+#if T2U_USE_5_4_API
+            textureImporter.lightmap = false;
+            textureImporter.grayscaleToAlpha = false;
+            textureImporter.linearTexture = false;
+            textureImporter.generateCubemap = TextureImporterGenerateCubemap.None;
             textureImporter.textureFormat = TextureImporterFormat.AutomaticTruecolor;
+#else
+            textureImporter.textureType = TextureImporterType.Default;
+            textureImporter.alphaSource = TextureImporterAlphaSource.FromInput;
+            textureImporter.sRGBTexture = false;
+            textureImporter.textureShape = TextureImporterShape.Texture2D;
+            textureImporter.textureCompression = TextureImporterCompression.Uncompressed;
+#endif
         }
 
     }
